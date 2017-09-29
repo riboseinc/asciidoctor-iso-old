@@ -1,0 +1,62 @@
+= Authoring ISO Standards in AsciiDoc
+
+`asciidoctor-iso` is asciidoctor-based workflow that can create new ISO
+standard documents in HTML and PDF formats.
+
+
+== Formats
+
+The format of an ISO standard document is defined by
+http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf["ISO/IEC Directives, Part 2, 2016"].
+
+There are mainly 2 types of ISO standard documents:
+
+1. "International Standard document"
+2. "International Standard Amendment document"
+
+These document types follow these templates / examples.
+
+
+=== International Standard document
+
+* http://www.iso.org/iso/model_document-rice_model.pdf["Model document of an International Standard - Rice model"]
+* Word `.DOC` template provided at https://www.iso.org/drafting-standards.html["Drafting Standards > Simple template"]
+
+
+=== International Standard Amendment document
+
+* http://www.iso.org/iso/rice_model_amendment.pdf["Model document of an Amendment - Rice model amendment"]
+
+
+== TODOs
+
+Particular areas that need implementation are (refer to <<Formats>> for details):
+
+* Title and metadata (e.g., ISO document number, which workgroup, edition and date)
+* Copyright notice
+* TOC
+* Section numbering
+* List numbering
+* Citations and Bibliography formatting
+* Headers and Footers
+* Annex
+* Self-references
+
+== HTML And PDF
+
+This gem has two parts:
+
+* HTML
+
+** contains necessary commands to create the HTML version
+** contains the stylesheet to generate the HTML version
+
+* PDF: maybe create a new gem called `asciidoctor-pdf-iso`
+
+** creates the PDF version in the ISO format
+** contains the stylesheet to generate the PDF version in ISO format
+
+* Create the example templates in corresponding AsciiDoc format:
+
+** Rice model Standard document
+** Rice model Standard Amendment document
